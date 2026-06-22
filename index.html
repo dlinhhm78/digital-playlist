@@ -4,12 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meo meo's Playlist</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,500;0,700;1,300&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght=0,300;0,500;0,700;1,300&family=Space+Grotesk:wght=500;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
@@ -33,29 +31,23 @@
 </head>
 <body class="min-h-screen text-pink-100 flex flex-col items-center justify-between p-6 overflow-hidden select-none">
 
-    <!-- Header -->
     <header class="w-full max-w-4xl flex justify-between items-center z-10">
         <div class="flex items-center gap-2">
             <span class="w-3 h-3 rounded-full bg-pink-500 animate-pulse"></span>
             <span class="text-xs uppercase tracking-widest text-pink-400 font-retro">🐾 Meo meo's Playlist / Vol.01</span>
         </div>
-        <!-- Settings Button -->
         <button id="configBtn" class="text-pink-400 hover:text-pink-300 transition-all cursor-pointer p-2 rounded-full hover:bg-pink-950/40">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.43l-1.003.828c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.99l1.004.831a1.125 1.125 0 0 1 .26 1.43l-1.297 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.356-.133-.752-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.43l1.004-.83c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.246.467c.354.133.748.073 1.071-.122.073-.044.146-.087.22-.128.332-.183.582-.495.645-.869L9.594 3.94Z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.43l-1.003.828c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.99l1.004.831a1.125 1.125 0 0 1 .26 1.43l-1.297 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.356-.133-.752-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94(1.11).94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.43l1.004-.83c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.246.467c.354.133.748.073 1.071-.122.073-.044.146-.087.22-.128.332-.183.582-.495.645-.869L9.594 3.94Z" />
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
             </svg>
         </button>
     </header>
 
-    <!-- Main Player Area -->
     <main class="w-full max-w-4xl flex flex-col md:flex-row items-center gap-12 my-auto z-10">
         
-        <!-- Left Side: Cassette Tape Visualizer -->
         <div class="flex-1 flex flex-col items-center">
-            <!-- Cassette Body -->
             <div class="w-80 h-48 bg-linear-to-b from-pink-900/90 to-pink-950 border-4 border-pink-500 rounded-xl p-4 shadow-[0_0_50px_rgba(236,72,153,0.2)] flex flex-col justify-between relative">
-                <!-- Label Tape -->
                 <div class="w-full h-16 bg-pink-200 rounded-sm p-2 flex flex-col justify-between text-pink-950">
                     <div class="flex justify-between items-center">
                         <span class="text-[10px] font-retro font-bold">MEO MEO</span>
@@ -65,7 +57,6 @@
                     <div id="tapeTitle" class="text-xs font-bold truncate tracking-wide">Select a song below</div>
                 </div>
 
-                <!-- Wheels -->
                 <div class="absolute inset-x-0 bottom-12 flex justify-center gap-16">
                     <div class="w-10 h-10 rounded-full bg-pink-950 border-4 border-pink-400 flex items-center justify-center relative overflow-hidden">
                         <div id="wheelLeft" class="w-6 h-6 border-2 border-dashed border-pink-300 rounded-full"></div>
@@ -75,11 +66,9 @@
                     </div>
                 </div>
 
-                <!-- Bottom Piece -->
                 <div class="w-32 h-4 bg-pink-900/60 mx-auto rounded-t-sm border-t border-pink-400/30"></div>
             </div>
 
-            <!-- Dynamic Lyrics Section -->
             <div class="mt-8 text-center min-h-[50px] px-4">
                 <p id="lyricDisplay" class="text-lg md:text-xl font-light italic text-pink-300 tracking-wide drop-shadow-[0_2px_8px_rgba(236,72,153,0.3)]">
                     "The melody starts when you press Play"
@@ -87,14 +76,11 @@
             </div>
         </div>
 
-        <!-- Right Side: Playlist Management -->
         <div class="w-full md:w-80 flex flex-col h-96 bg-black/40 border border-pink-900/40 rounded-2xl p-4 backdrop-blur-md">
             <h2 class="text-sm font-retro uppercase text-pink-400 tracking-widest mb-3 px-2">Tracklist</h2>
             <div id="playlistContainer" class="flex-1 overflow-y-auto pr-1 gap-1 flex flex-col no-scrollbar">
-                <!-- Injected via JS -->
-            </div>
+                </div>
             
-            <!-- Controls Bar -->
             <div class="mt-4 pt-3 border-t border-pink-900/40 flex items-center justify-between px-2">
                 <button id="prevBtn" class="hover:text-pink-400 transition cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 16.811c0 .857-.912 1.42-1.683.977l-7.108-4.062a1.125 1.125 0 0 1 0-1.954l7.108-4.062A1.125 1.125 0 0 1 21 8.688v8.123ZM11.25 16.811c0 .857-.912 1.42-1.683.977l-7.108-4.062a1.125 1.125 0 0 1 0-1.954l7.108-4.062a1.125 1.125 0 0 1 1.683.977v8.123Z" /></svg></button>
                 <button id="playBtn" class="w-10 h-10 rounded-full bg-pink-600 hover:bg-pink-500 text-white flex items-center justify-center transition shadow-lg cursor-pointer transform active:scale-95">
@@ -105,161 +91,16 @@
         </div>
     </main>
 
-    <!-- Footer Quote (Updated to English) -->
     <footer class="text-[10px] text-pink-600/60 font-retro tracking-widest z-10 text-center">
         THIS CASSETTE TAPE ONLY PLAYS MELODIES THAT BELONG TO MEO MEO.
     </footer>
 
-    <!-- Hidden Audio Element -->
     <audio id="audioPlayer" loop></audio>
 
-    <!-- Configuration Modal -->
     <div id="configModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
         <div class="bg-zinc-900 border border-pink-500/30 rounded-2xl w-full max-w-lg max-h-[80vh] flex flex-col p-6 shadow-2xl">
             <div class="flex justify-between items-center mb-4">
                 <h3 class="text-pink-400 font-retro uppercase tracking-wider">Configure Playlist & Lyrics</h3>
                 <button id="closeConfigBtn" class="text-zinc-400 hover:text-white cursor-pointer text-xl">&times;</button>
             </div>
-            <div id="modalInputsContainer" class="flex-1 overflow-y-auto space-y-4 pr-2 no-scrollbar">
-                <!-- Generated via JS -->
-            </div>
-            <button id="saveConfigBtn" class="mt-4 w-full py-2 bg-pink-600 hover:bg-pink-500 text-white font-semibold rounded-xl transition cursor-pointer">Save Changes</button>
-        </div>
-    </div>
-
-    <!-- JS Logic -->
-    <script>
-        // Pre-filled with your 10 custom tracks
-        const defaultSongs = [
-            { id: 1, title: "Maggots for brain", artist: "Olivia Rodrigo", src: "maggots.mp3", lyric: "Your favorite lyric for track 1..." },
-            { id: 2, title: "U + me = <3", artist: "Olivia Rodrigo", src: "u_me.mp3", lyric: "Your favorite lyric for track 2..." },
-            { id: 3, title: "It's not living (If it's not with you)", artist: "The 1975", src: "its_not_living.mp3", lyric: "Your favorite lyric for track 3..." },
-            { id: 4, title: "Loud", artist: "NMIXX", src: "loud.mp3", lyric: "Your favorite lyric for track 4..." },
-            { id: 5, title: "Sweat Dreams", artist: "Red Velvet", src: "sweet_dreams.mp3", lyric: "Your favorite lyric for track 5..." },
-            { id: 6, title: "Moon Cycle", artist: "Melanie Martinez", src: "moon_cycle.mp3", lyric: "Your favorite lyric for track 6..." },
-            { id: 7, title: "Focus", artist: "Niki", src: "focus.mp3", lyric: "Your favorite lyric for track 7..." },
-            { id: 8, title: "Comfort Crowd", artist: "Conan Gray", src: "comfort_crowd.mp3", lyric: "Your favorite lyric for track 8..." },
-            { id: 9, title: "Untouchable", artist: "Taylor Swift", src: "untouchable.mp3", lyric: "Your favorite lyric for track 9..." },
-            { id: 10, title: "Lost in the ocean", artist: "Glass Animals", src: "lost_in_ocean.mp3", lyric: "Your favorite lyric for track 10..." }
-        ];
-
-        let songs = JSON.parse(localStorage.getItem('pink_playlist')) || defaultSongs;
-        let currentIndex = 0;
-        let isPlaying = false;
-
-        const audioPlayer = document.getElementById('audioPlayer');
-        const playlistContainer = document.getElementById('playlistContainer');
-        const tapeTitle = document.getElementById('tapeTitle');
-        const lyricDisplay = document.getElementById('lyricDisplay');
-        const playBtn = document.getElementById('playBtn');
-        const playIcon = document.getElementById('playIcon');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        const wheelLeft = document.getElementById('wheelLeft');
-        const wheelRight = document.getElementById('wheelRight');
-        
-        const configBtn = document.getElementById('configBtn');
-        const configModal = document.getElementById('configModal');
-        const closeConfigBtn = document.getElementById('closeConfigBtn');
-        const saveConfigBtn = document.getElementById('saveConfigBtn');
-        const modalInputsContainer = document.getElementById('modalInputsContainer');
-
-        function renderPlaylist() {
-            playlistContainer.innerHTML = '';
-            songs.forEach((song, index) => {
-                const item = document.createElement('div');
-                item.className = `flex items-center justify-between p-2.5 rounded-xl cursor-pointer transition-all ${index === currentIndex ? 'bg-pink-950/60 border border-pink-500 text-pink-300 font-bold' : 'hover:bg-pink-950/20 text-zinc-400 hover:text-pink-200'}`;
-                item.onclick = () => selectSong(index);
-                item.innerHTML = `
-                    <div class="flex flex-col max-w-[80%]">
-                        <span class="text-xs truncate">${song.title}</span>
-                        <span class="text-[10px] opacity-60 truncate">${song.artist}</span>
-                    </div>
-                    <span class="text-[10px] font-retro opacity-40">${String(index + 1).padStart(2, '0')}</span>
-                `;
-                playlistContainer.appendChild(item);
-            });
-        }
-
-        function selectSong(index) {
-            currentIndex = index;
-            const song = songs[currentIndex];
-            audioPlayer.src = song.src;
-            tapeTitle.innerText = `${song.title} - ${song.artist}`;
-            lyricDisplay.innerText = song.lyric ? `"${song.lyric}"` : `"No custom lyrics set for this melody..."`;
-            
-            renderPlaylist();
-            if (isPlaying) {
-                audioPlayer.play().catch(e => console.log("Interaction required to trigger audio"));
-            }
-        }
-
-        function togglePlay() {
-            if (!audioPlayer.src) {
-                selectSong(currentIndex);
-            }
-            if (isPlaying) {
-                audioPlayer.pause();
-                playIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />`;
-                wheelLeft.classList.remove('spinning');
-                wheelRight.classList.remove('spinning');
-            } else {
-                audioPlayer.play().catch(err => alert("Please click the gear icon to configure valid .mp3 links for your tracks!"));
-                playIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25v13.5m-7.5-13.5v13.5" />`;
-                wheelLeft.classList.add('spinning');
-                wheelRight.classList.add('spinning');
-            }
-            isPlaying = !isPlaying;
-        }
-
-        nextBtn.onclick = () => {
-            let nextIdx = (currentIndex + 1) % songs.length;
-            selectSong(nextIdx);
-        };
-
-        prevBtn.onclick = () => {
-            let prevIdx = (currentIndex - 1 + songs.length) % songs.length;
-            selectSong(prevIdx);
-        };
-
-        playBtn.onclick = togglePlay;
-
-        configBtn.onclick = () => {
-            modalInputsContainer.innerHTML = '';
-            songs.forEach((song, index) => {
-                const formGroup = document.createElement('div');
-                formGroup.className = "p-3 bg-zinc-800/50 border border-zinc-700/50 rounded-xl space-y-2";
-                formGroup.innerHTML = `
-                    <div class="text-xs text-pink-400 font-bold font-retro mb-1">TRACK ${index + 1}: ${song.title}</div>
-                    <div>
-                        <label class="text-[10px] text-zinc-400 block mb-1">Audio Source (.mp3 file name or URL):</label>
-                        <input type="text" data-index="${index}" data-field="src" value="${song.src}" class="w-full text-xs p-2 bg-zinc-950 border border-zinc-700 rounded-md focus:border-pink-500 outline-none text-pink-200">
-                    </div>
-                    <div>
-                        <label class="text-[10px] text-zinc-400 block mb-1">Featured Lyric Line:</label>
-                        <input type="text" data-index="${index}" data-field="lyric" value="${song.lyric || ''}" class="w-full text-xs p-2 bg-zinc-950 border border-zinc-700 rounded-md focus:border-pink-500 outline-none text-pink-200" placeholder="Type a lyric snippet...">
-                    </div>
-                `;
-                modalInputsContainer.appendChild(formGroup);
-            });
-            configModal.classList.remove('hidden');
-        };
-
-        closeConfigBtn.onclick = () => configModal.classList.add('hidden');
-
-        saveConfigBtn.onclick = () => {
-            const inputs = modalInputsContainer.querySelectorAll('input');
-            inputs.forEach(input => {
-                const idx = parseInt(input.getAttribute('data-index'));
-                const field = input.getAttribute('data-field');
-                songs[idx][field] = input.value;
-            });
-            localStorage.setItem('pink_playlist', JSON.stringify(songs));
-            selectSong(currentIndex);
-            configModal.classList.add('hidden');
-        };
-
-        selectSong(currentIndex);
-    </script>
-</body>
-</html>
+            <div id="modalInputsContainer" class="flex-1 overflow-y-auto space-y-4 pr
